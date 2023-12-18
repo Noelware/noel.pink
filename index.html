@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>noel.pink</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body {
+        height: 100%;
+        font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        overflow: hidden;
+      }
+
+      .contain {
+        display: block;
+      }
+
+      /* Rotate contents */
+      body {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: rotation 5s infinite linear;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #18181b;
+          color: white;
+        }
+      }
+
+      /* If the device is portrait, we want borders to be slightly lesser. */
+      @media screen and (orientation:portrait) {
+        body {
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contain">
+      <img src="/trans.png" alt="Noel trans heart" />
+    </div>
+  </body>
+</html>
